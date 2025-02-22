@@ -7,10 +7,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        variable: ["variable", "sans-serif"],
+        general: ["general", "sans-serif"],
+        yoyo : ["yoyo", "sans-serif"],
+        neue: ["neue", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      
     },
   },
   plugins: [],
