@@ -22,7 +22,7 @@ const page = () => {
       }, []);
 
   return (
-    <main className='bg-black text-white'>
+    <main className='bg-black text-white overflow-hidden'>
     <Navbar />
     <Services />
     <Services />
