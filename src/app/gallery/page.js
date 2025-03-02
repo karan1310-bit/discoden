@@ -1,5 +1,6 @@
 'use client'
 import Navbar from '@/components/Navbar'
+import SliderPage from '@/components/SliderPage';
 import Lenis from 'lenis';
 import React, { useEffect } from 'react'
 
@@ -22,7 +23,8 @@ const page = () => {
 
   return (
     <main className='min-h-screen bg-black text-white overflow-hidden'>
-    <Navbar />
+        <Navbar />
+        <SliderPage />
     </main>
   )
 }

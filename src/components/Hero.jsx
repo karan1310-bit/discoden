@@ -70,7 +70,7 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-[99] w-[66vw] h-[66vw] lg:w-[31vw] lg:h-[31vw] rounded-full flex items-center justify-center mb-16 md:mb-24"
+          className="absolute z-50 w-[66vw] h-[66vw] lg:w-[31vw] lg:h-[31vw] rounded-full flex items-center justify-center mb-8 md:mb-24"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
@@ -80,10 +80,10 @@ const Hero = () => {
           </div>
 
         {/* CLUB / FM TEXT */}
-        <div className="flex flex-col lg:flex-row md:items-center items-start gap-60 justify-between w-full px-6 lg:px-10 pt-2 lg:pt-56 space-y-10 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row md:items-center items-start gap-40 justify-between w-full px-6 lg:px-10 lg:pt-56 space-y-10 lg:space-y-0">
           <div ref={clubRef} className="lg:text-start" id="club">
-            <h1 className="text-5xl lg:text-[12vw] font-normal">Club</h1>
-            <p className="text-xl lg:text-5xl text-gray-300">
+            <h1 className="text-6xl lg:text-[12vw] font-normal">Club</h1>
+            <p className="text-xl tracking-tight lg:text-5xl text-gray-300">
               See our program
               <br />
               and come dance{" "}
@@ -91,7 +91,7 @@ const Hero = () => {
             </p>
           </div>
           <div ref={fmRef} className="lg:text-start" id="fm">
-            <h1 className="text-5xl lg:text-[12vw] font-normal">FM</h1>
+            <h1 className="text-6xl lg:text-[12vw] font-normal">FM</h1>
             <p className="text-xl lg:text-5xl text-gray-300">
               Watch live or
               <br />
