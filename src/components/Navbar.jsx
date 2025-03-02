@@ -41,11 +41,10 @@ export default function Navbar() {
 
   // Navigation links (same for both mobile and desktop)
   const navLinks = [
-    { href: "club", label: "Club" },
     { href: "services", label: "Services" },
-    { href: "gallery", label: "Gallery" },
     { href: "about", label: "About" },
     { href: "contact", label: "Contact" },
+    { href: "contact", label: "Book now" },
   ];
 
   return (

@@ -18,23 +18,23 @@ const Hero = () => {
     // Animate the sun in (scale & opacity)
     tl.fromTo(
       sunRef.current,
-      { scale: 0.5, opacity: 0 },
-      { scale: 1, opacity: 1 }
+      { scale: 0.5, opacity: 0 ,delay: 2},
+      { scale: 1, opacity: 1 ,delay: 2},
     );
 
     // Animate the "Club" text (slide in from left)
     tl.fromTo(
       clubRef.current,
-      { x: -50, opacity: 0 },
-      { x: 0, opacity: 1 },
+      { y: 20, opacity: 0 ,delay: 1},
+      { y: 0, opacity: 1 ,delay: 1},
       "<0.3"
     );
 
     // Animate the "FM" text (slide in from right)
     tl.fromTo(
       fmRef.current,
-      { x: 50, opacity: 0 },
-      { x: 0, opacity: 1 },
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1 },
       "<0.3"
     );
 
@@ -70,7 +70,7 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[66vw] h-[66vw] lg:w-[31vw] lg:h-[31vw] rounded-full flex items-center justify-center mb-8 md:mb-24"
+          className="absolute z-50 w-[66vw] h-[66vw] lg:w-[31vw] lg:h-[31vw] rounded-full flex items-center justify-center mb-16 md:mb-24"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
@@ -80,8 +80,8 @@ const Hero = () => {
           </div>
 
         {/* CLUB / FM TEXT */}
-        <div className="flex flex-col lg:flex-row md:items-center items-start gap-40 justify-between w-full px-6 lg:px-10 lg:pt-56 space-y-10 lg:space-y-0">
-          <div ref={clubRef} className="lg:text-start" id="club">
+        <div className="flex flex-col lg:flex-row md:items-center items-start gap-40 justify-between w-full px-6 lg:px-10 lg:pt-56  lg:space-y-0">
+          <div ref={clubRef} className="lg:text-start pb-12" id="club">
             <h1 className="text-6xl lg:text-[12vw] font-normal">Club</h1>
             <p className="text-xl tracking-tight lg:text-5xl text-gray-300">
               See our program
@@ -90,7 +90,7 @@ const Hero = () => {
               <FaArrowRight className="h-10 w-12 md:h-8 md:w-8 md:mt-2" />
             </p>
           </div>
-          <div ref={fmRef} className="lg:text-start" id="fm">
+          <div ref={fmRef} className="lg:text-start pb-6" id="fm">
             <h1 className="text-6xl lg:text-[12vw] font-normal">FM</h1>
             <p className="text-xl lg:text-5xl text-gray-300">
               Watch live or
