@@ -33,7 +33,7 @@ const Slider = () => {
 
   return (
     <>
-    <div className="max-w-7xl mx-auto px-4 mt-12 select-none">
+    <div className="max-w-7xl mx-auto px-4 select-none">
       <h1 className="text-center font-neue text-3xl mb-12">Gallery</h1>
 
       <Swiper

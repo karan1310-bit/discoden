@@ -9,21 +9,20 @@ import Image from "next/image";
 import Book from "./Book";
 
 gsap.registerPlugin(ScrollTrigger) 
-const word = "With Discoden";
 
 const images = [
     {
       src: Picture1,
-      className: "h-[60vh] w-[50vh] z-[1]",
+      className: "h-[60vh] md:h-[70vh] w-[50vh] md:w-[70vh] z-[1]",
     },
     {
       src: Picture2,
-      className: "left-[55vw] top-[15vh] h-[40vh] w-[30vh] z-[2]",
+      className: "left-[45vw] md:left-[55vw] top-[15vh] md:h-[50vh] md:w-[40vh] h-[35vh] w-[30vh] z-[2]",
     },
     {
       src: Picture3,
       // Third image: left 27.5vw, top 40vh, height 25vh, width 20vh, z-index 3
-      className: "left-[27.5vw] top-[40vh] h-[25vh] w-[20vh] z-[3]",
+      className: "left-[27.5vw] top-[40vh] h-[25vh] w-[20vh] md:h-[35vh] md:w-[30vh] z-[3]",
     },
   ];
 
@@ -57,19 +56,10 @@ const Services = () => {
     }, [])
 
   return (
-    <div ref={container} className="container mt-[15vh] min-h-screen font-neue ">
+    <div ref={container} className="container min-h-screen font-neue ">
             <div className="body ml-[10vw]">
                 <h1 className="m-0 mt-[10px] text-[3vw] leading-none uppercase" ref={title1}>Air Club Package Starting At:</h1>
                 <Book title="Book now"></Book>
-                <div>
-                    <p className="text-white m-0 mt-[10px] text-[3.5vw]">
-                        {
-                            word.split("").map((letter, i) => {
-                                return <span key={`l_${i}`} ref={el => lettersRef.current[i] = el}>{letter}</span>
-                            })
-                        }
-                    </p>
-                </div>
             </div>
             <div className="images flex justify-center relative mt-[5vh]">
                 {

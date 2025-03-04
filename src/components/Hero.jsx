@@ -13,20 +13,20 @@ const Hero = () => {
 
   useEffect(() => {
     // Create a master timeline
-    const tl = gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } });
+    const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.in" } });
 
     // Animate the sun in (scale & opacity)
     tl.fromTo(
       sunRef.current,
-      { scale: 0.5, opacity: 0 ,delay: 2},
-      { scale: 1, opacity: 1 ,delay: 2},
+      { scale: 0.5, opacity: 0 ,delay: 2.5},
+      { scale: 1, opacity: 1 ,delay: 2.5},
     );
 
     // Animate the "Club" text (slide in from left)
     tl.fromTo(
       clubRef.current,
-      { y: 20, opacity: 0 ,delay: 1},
-      { y: 0, opacity: 1 ,delay: 1},
+      { y: 20, opacity: 0 ,delay: 0.2},
+      { y: 0, opacity: 1 ,delay: 0.2},
       "<0.3"
     );
 
@@ -62,7 +62,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-black text-white flex flex-col font-neue">
+    <div className="h-screen overflow-hidden bg-black text-white flex flex-col font-neue">
       {/* NAVBAR */}
       <Navbar />
       {/* HERO SECTION */}

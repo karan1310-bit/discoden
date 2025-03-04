@@ -10,10 +10,6 @@ const page = () => {
     useEffect(() => {
         const lenis = new Lenis();
     
-        lenis.on("scroll", (e) => {
-          console.log(e);
-        });
-    
         function raf(time) {
           lenis.raf(time);
           requestAnimationFrame(raf);
@@ -25,6 +21,7 @@ const page = () => {
   return (
     <main className='min-h-screen bg-black text-white overflow-hidden'>
     <Navbar />
+    <h1 className='text-center font-neue mt-6 text-xl md:text-3xl mb-[10vh]'>Services</h1>
     <Services />
     <Services />
     <Services />
