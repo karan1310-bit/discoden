@@ -25,17 +25,30 @@ const Hero = () => {
     // Animate the "Club" text (slide in from left)
     tl.fromTo(
       clubRef.current,
-      { y: 20, opacity: 0 ,delay: 0.2},
-      { y: 0, opacity: 1 ,delay: 0.2},
+      { x: -50, y: 50, opacity: 0, scale: 0.9 },
+      { 
+        x: 0, 
+        y: 0, 
+        opacity: 1, 
+        scale: 1, 
+        ease: "power3.out", 
+        duration: 1.2 
+      },
       "<0.3"
     );
-
-    // Animate the "FM" text (slide in from right)
+    
     tl.fromTo(
       fmRef.current,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1 },
-      "<0.3"
+      { x: 50, y: 50, opacity: 0, scale: 0.9 },
+      { 
+        x: 0, 
+        y: 0, 
+        opacity: 1, 
+        scale: 1, 
+        ease: "power3.out", 
+        duration: 1.2 
+      },
+      "<0.2"
     );
 
     // Create a separate timeline for infinite color cycling
@@ -70,13 +83,13 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[66vw] h-[66vw] lg:w-[31vw] lg:h-[31vw] rounded-full flex items-center justify-center mb-16 md:mb-24"
+          className="absolute z-50 w-[73vw] h-[73vw] lg:w-[32vw] lg:h-[32vw] rounded-full flex items-center justify-center mb-16 md:mb-28"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
           }}
         >
-          <Image src={logo} alt="" className="z-50 w-[66vw] h-[66vw] lg:w-[31vw] lg:h-[31vw] rounded-full"/>
+          <Image src={logo} alt="" className="z-50 w-[71vw] h-[71vw] lg:w-[31vw] lg:h-[31vw] rounded-full"/>
           </div>
 
         {/* CLUB / FM TEXT */}
