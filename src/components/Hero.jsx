@@ -25,7 +25,7 @@ const Hero = () => {
     // Animate the "Club" text (slide in from left)
     tl.fromTo(
       clubRef.current,
-      { x: -50, y: 50, opacity: 0, scale: 0.9 },
+      { x: -50, opacity: 0, scale: 0.9 },
       { 
         x: 0, 
         y: 0, 
@@ -39,7 +39,7 @@ const Hero = () => {
     
     tl.fromTo(
       fmRef.current,
-      { x: 50, y: 50, opacity: 0, scale: 0.9 },
+      { x: 50, opacity: 0, scale: 0.9 },
       { 
         x: 0, 
         y: 0, 

@@ -2,9 +2,8 @@
 import Description from "@/components/Description";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import Intro from "@/components/Intro";
+import PortfolioScroll from "@/components/PortfolioScroll";
 import PreLoader from "@/components/PreLoader";
-import Section from "@/components/Section";
 import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useState } from "react";
@@ -37,9 +36,8 @@ useEffect(() => {
         {isLoading && <PreLoader />}
       </AnimatePresence>
     <Hero />
-    <Intro />
+    <PortfolioScroll />
     <Description />
-    <Section />
     <Footer />
     </div>
   )

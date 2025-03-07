@@ -34,7 +34,7 @@ export default function Description() {
     let body = [];
     phrase.split(" ").forEach( (word, i) => {
       const letters = splitLetters(word);
-      body.push(<p className="text-[9vw] md:text-[4vw] font-neue uppercase text-center max-w-[70vw] md:max-w-[50vw] leading-none" key={word + "_" + i}>{letters}</p>)
+      body.push(<p className="text-[9vw] md:text-[3.5vw] font-neue uppercase text-center max-w-[70vw] md:max-w-[50vw] leading-none" key={word + "_" + i}>{letters}</p>)
     })
     return body
   }
