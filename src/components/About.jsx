@@ -2,9 +2,9 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="min-h-fit bg-black text-white px-6 lg:px-24 font-neue">
+    <div className="min-h-fit bg-black text-white px-6 lg:px-16 font-neue">
         <main className="py-8 md:py-20">
-        <h1 className="text-3xl lg:text-5xl font-bold max-w-4xl">
+        <h1 className="text-3xl lg:text-5xl font-medium max-w-4xl">
         Introducing Disco Den, the ultimate destination for an unparalleled party experience! Our inflatable nightclubs are a groundbreaking addition to Canada's nightlife scene, promising an unforgettable atmosphere.
         </h1>
         <p className="mt-6 text-xl max-w-5xl text-gray-500">

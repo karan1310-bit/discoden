@@ -25,30 +25,24 @@ const Hero = () => {
     // Animate the "Club" text (slide in from left)
     tl.fromTo(
       clubRef.current,
-      { x: -50, opacity: 0, scale: 0.9 },
+      { x: -30, opacity: 0 },
       { 
         x: 0, 
-        y: 0, 
         opacity: 1, 
-        scale: 1, 
-        ease: "power3.out", 
-        duration: 1.2 
-      },
-      "<0.3"
+        ease: "power1.out", 
+        duration: 0.8 
+      }
     );
     
     tl.fromTo(
       fmRef.current,
-      { x: 50, opacity: 0, scale: 0.9 },
+      { x: 30, opacity: 0 },
       { 
         x: 0, 
-        y: 0, 
         opacity: 1, 
-        scale: 1, 
-        ease: "power3.out", 
-        duration: 1.2 
-      },
-      "<0.2"
+        ease: "power1.out", 
+        duration: 0.8 
+      }
     );
 
     // Create a separate timeline for infinite color cycling

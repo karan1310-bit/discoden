@@ -12,9 +12,9 @@ const Form = () => {
   return (
     <div className="min-h-screen bg-black mt-12 md:mt-20 text-white flex flex-col px-6 md:px-16 font-neue">
       {/* Heading */}
-      <div className="flex flex-col items-start mb-8">
+      <div className="flex flex-col items-start mb-2 md:mb-8">
         <h1 className="text-4xl md:text-7xl font-bold uppercase">Your NightLife Fun is Our <br /> Priority</h1>
-        <p className="mt-12 text-xl flex items-center justify-center space-x-0">
+        <p className="mt-4 md:mt-12 text-xl flex items-center justify-center space-x-0">
           <span>Give Us A Scratch</span>
           <span className="animate-bounce pl-2">↘</span>
         </p>
@@ -48,15 +48,43 @@ const Form = () => {
             className="bg-transparent border border-gray-400 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
           <input 
-            type="text" 
-            placeholder="Organisation/Company Name" 
-            {...register("company")} 
-            className="bg-transparent border border-gray-400 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          type="date" 
+          {...register("eventDate", { required: "Event date is required" })} 
+            
+            className="bg-transparent border border-gray-400 text-gray-400 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Date Picker */}
+    <input 
+      type="text" 
+      placeholder="Event Type" 
+      {...register("company")} 
+      className="bg-transparent border border-gray-400 rounded-3xl px-5 py-3 text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+    />
+
+    {/* Radio Button Group */}
+    <fieldset className="bg-transparent border border-gray-400 rounded-3xl px-5 py-3">
+      <legend className="text-gray-400 text-sm">Select an Option*</legend>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+        {["Inflatable Nightclub", "Hookah Catering", "Professional DJ", "Fire Breather", "Balloon Decor", "Boards & Snacks", "Food Catering", "Lounge Furniture Rentals"].map((option, index) => (
+          <label key={index} className="flex items-center space-x-2 text-gray-400">
+            <input 
+              type="checkbox" 
+              value={option} 
+              {...register("radioOption", { required: "Please select an option" })} 
+              className="accent-yellow-500"
+            />
+            <span className="text-sm">{option}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  </div>
+
         <textarea 
-          placeholder="Tell us more about your project*" 
+          placeholder="What are you looking for?*" 
           {...register("projectDetails", { required: "Project details are required" })} 
           className="bg-transparent border border-gray-400 rounded-3xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 w-full h-32"
         ></textarea>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="max-h-fit bg-black text-white flex flex-col px-8 py-8 mt-12 font-neue">
+    <div className="max-h-fit bg-black text-white flex flex-col px-8 md:px-16 py-6 md:py-16 mt-12 font-neue">
     {/* Logo */}
     <div className="text-6xl font-bold">
       <span className="block">Disco</span>

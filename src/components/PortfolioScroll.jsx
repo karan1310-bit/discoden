@@ -77,7 +77,7 @@ const PortfolioScroll = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="project-box flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[75vh] md:h-[70vh] relative rounded-3xl overflow-hidden shadow-xl"
+              className="project-box flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[75vh] md:h-[70vh] relative border-[1px] border-white rounded-[48px] overflow-hidden shadow-xl"
               style={{
                 backgroundImage: `url(${project.image.src})`,
                 backgroundSize: "cover",
@@ -85,7 +85,7 @@ const PortfolioScroll = () => {
               }}
             >
               {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/50 rounded-3xl"></div>
+              
   
               {/* Card Content */}
               <div className="absolute bottom-5 left-5 right-5 text-white p-5">

@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Picture1 from '../../public/medias/1.jpg';
 import Picture2 from '../../public/medias/2.jpg';
-import Picture3 from '../../public/medias/3.jpg';
 import Image from "next/image";
 import Book from "./Book";
 
@@ -18,11 +17,6 @@ const images = [
     {
       src: Picture2,
       className: "left-[45vw] md:left-[55vw] top-[15vh] md:h-[50vh] md:w-[40vh] h-[35vh] w-[30vh] z-[2]",
-    },
-    {
-      src: Picture3,
-      // Third image: left 27.5vw, top 40vh, height 25vh, width 20vh, z-index 3
-      className: "left-[27.5vw] top-[40vh] h-[25vh] w-[20vh] md:h-[35vh] md:w-[30vh] z-[3]",
     },
   ];
 
@@ -56,9 +50,9 @@ const Services = () => {
     }, [])
 
   return (
-    <div ref={container} className="container min-h-screen font-neue ">
-            <div className="body ml-[10vw]">
-                <h1 className="m-0 mt-[10px] text-[3vw] leading-none uppercase" ref={title1}>Air Club Package Starting At:</h1>
+    <div ref={container} className="container min-h-screen font-neue">
+            <div className="body ml-[7vw] md:ml-[4.5vw]">
+                <h1 className="m-0 mt-[10px] text-[4.5vw] md:text-[2.8vw] leading-none uppercase" ref={title1}>Air Club Package Starting At:</h1>
                 <Book title="Book now"></Book>
             </div>
             <div className="images flex justify-center relative mt-[5vh]">
