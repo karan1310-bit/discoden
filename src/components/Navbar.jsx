@@ -44,7 +44,7 @@ export default function Navbar() {
     { href: "services", label: "Services" },
     { href: "about", label: "About" },
     { href: "contact", label: "Contact" },
-    { href: "contact", label: "Book now" },
+    { href: "book", label: "Book now" },
   ];
 
   return (

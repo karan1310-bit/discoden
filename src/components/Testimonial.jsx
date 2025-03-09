@@ -64,7 +64,7 @@ const Testimonial = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="border border-gray-700 p-6 rounded-lg flex flex-col justify-between h-[350px] md:h-[400px] lg:h-[450px]">
+            <div className="border border-gray-700 p-6 rounded-3xl flex flex-col justify-between h-[350px] md:h-[400px] lg:h-[450px]">
               <div className="flex-grow flex flex-col">
                 <p className="text-gray-300 text-lg flex-grow">{testimonial.review}</p>
               </div>

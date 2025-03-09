@@ -2,6 +2,7 @@
 import Description from "@/components/Description";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import Insta from "@/components/Insta";
 import PortfolioScroll from "@/components/PortfolioScroll";
 import PreLoader from "@/components/PreLoader";
 import { AnimatePresence } from "framer-motion";
@@ -38,6 +39,7 @@ useEffect(() => {
     <Hero />
     <PortfolioScroll />
     <Description />
+    <Insta />
     <Footer />
     </div>
   )

@@ -10,11 +10,11 @@ const Form = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black mt-12 md:mt-20 text-white flex flex-col px-6 md:px-16 font-neue">
+    <div className="min-h-screen bg-black mt-8 md:mt-16 text-white flex flex-col px-6 md:px-16 font-neue">
       {/* Heading */}
       <div className="flex flex-col items-start mb-2 md:mb-8">
         <h1 className="text-4xl md:text-7xl font-bold uppercase">Your NightLife Fun is Our <br /> Priority</h1>
-        <p className="mt-4 md:mt-12 text-xl flex items-center justify-center space-x-0">
+        <p className="mt-4 md:mt-8 text-xl flex items-center justify-center space-x-0">
           <span>Give Us A Scratch</span>
           <span className="animate-bounce pl-2">↘</span>
         </p>
