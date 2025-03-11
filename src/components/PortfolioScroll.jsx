@@ -64,7 +64,7 @@ const PortfolioScroll = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="project-box flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[52vh] md:h-[70vh] relative border-[1px] border-white rounded-[48px] overflow-hidden shadow-xl flex flex-col items-center justify-center bg-zinc-950 p-6 md:p-0 text-center transition-all ease-in duration-300 hover:bg-yellow-400 hover:text-black"
+            className="project-box flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[45vh] md:h-[70vh] relative border-[1px] border-white rounded-[48px] overflow-hidden shadow-xl flex flex-col items-center justify-center bg-zinc-950 p-6 md:p-0 text-center transition-all ease-in duration-300 hover:bg-yellow-400 hover:text-black"
           >
             {/* Icon Display */}
             <div className="flex justify-center items-center w-full mb-4">{project.icon}</div>

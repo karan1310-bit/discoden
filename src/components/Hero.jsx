@@ -30,7 +30,7 @@ const Hero = () => {
       { 
         x: 0, 
         opacity: 1, 
-        ease: "power1.out", 
+        ease: "power1.out",
         duration: 0.8 
       }
     );
@@ -79,7 +79,7 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[86vw] h-[86vw] lg:w-[34vw] lg:h-[34vw] rounded-full flex items-center justify-center mb-14 md:mb-32"
+          className="absolute z-50 w-[86vw] h-[86vw] lg:w-[34vw] lg:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-32"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
@@ -89,24 +89,24 @@ const Hero = () => {
           </div>
 
         {/* CLUB / FM TEXT */}
-        <div className="flex flex-col lg:flex-row md:items-center items-start gap-40 justify-between w-full px-6 lg:px-10 lg:pt-56  lg:space-y-0">
-          <div ref={clubRef} className="lg:text-start z-[99] md:pb-6 pb-16" id="club">
+        <div className="flex flex-col lg:flex-row md:items-center items-start gap-72 justify-between w-full px-6 lg:px-10 lg:pt-56 lg:space-y-0">
+          <div ref={clubRef} className="lg:text-start z-[99] md:pb-6 pb-2" id="club">
             <Book title="Lux">
             </Book>
-            <p className="text-xl tracking-tight lg:text-5xl text-gray-300">
+            <p className="text-3xl tracking-tight lg:text-5xl text-gray-300">
               See our services
               <br />
               and come dance
-              <FaArrowRight className="h-10 w-12 md:h-8 md:w-8 md:mt-2" />
+              <FaArrowRight className="h-10 w-12 md:h-8 md:w-8 mt-3 md:mt-2" />
             </p>
           </div>
           <div ref={fmRef} className="lg:text-start z-[99] pb-10 md:pb-8" id="fm">
           <Book title="Vibe">
           </Book>
-            <p className="text-xl lg:text-5xl text-gray-300">
+            <p className="text-3xl lg:text-5xl text-gray-300">
             Browse our gallery <br /> of moments
   
-              <FaArrowRight className="h-10 w-12 md:mt-2 md:h-8 md:w-8" />
+              <FaArrowRight className="h-10 w-12 md:mt-2 md:h-8 mt-3 md:w-8" />
             </p>
             
           </div>

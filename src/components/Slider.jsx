@@ -43,18 +43,18 @@ const Slider = () => {
         slidesPerView={1} // Default for small screens
         centeredSlides={true}
         loop={true}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
           640: {
             slidesPerView: 1.5,
             spaceBetween: 15,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
         }}
-        className="w-full h-[400px]"
+        className="w-full h-[350px] md:h-[400px] rounded-sm object-cover"
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index} className="flex justify-center items-center px-4 pl-12 sm:pl-6 md:pl-12">
@@ -62,12 +62,12 @@ const Slider = () => {
               <img
                 src={item.src}
                 alt={`Gallery ${index}`}
-                className="rounded-3xl object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
+                className="rounded-sm object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
               />
             ) : (
               <video
                 src={item.src}
-                className="rounded-3xl object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
+                className="rounded-sm object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
                 autoPlay
                 loop
                 muted

@@ -88,7 +88,7 @@ export default function Navbar() {
           {/* Mobile Drawer */}
           <div
             ref={menuRef}
-            className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-black z-[99] transform transition-transform duration-500 ease-in-out"
+            className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-black z-[999] transform transition-transform duration-500 ease-in-out"
           >
             <div className="p-4">
               {/* Close button inside the drawer */}
