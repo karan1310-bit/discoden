@@ -14,35 +14,37 @@ const Hero = () => {
 
   useEffect(() => {
     // Create a master timeline
-    const isGsapPlayed = sessionStorage.getItem("gsapPlayed");
+    const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.in" } });
 
-    if (!isGsapPlayed) {
-      const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.in" } });
+    // Animate the sun in (scale & opacity)
+    tl.fromTo(
+      sunRef.current,
+      { scale: 0.5, opacity: 0 ,delay: 2.5},
+      { scale: 1, opacity: 1 ,delay: 2.5},
+    );
 
-      // Animate the sun
-      tl.fromTo(
-        sunRef.current,
-        { scale: 0.5, opacity: 0 },
-        { scale: 1, opacity: 1, delay: 2.5 }
-      );
-
-      // Animate "Club" text (slide in from left)
-      tl.fromTo(
-        clubRef.current,
-        { x: -30, opacity: 0 },
-        { x: 0, opacity: 1, ease: "power1.out", duration: 0.8 }
-      );
-
-      // Animate "FM" text (slide in from right)
-      tl.fromTo(
-        fmRef.current,
-        { x: 30, opacity: 0 },
-        { x: 0, opacity: 1, ease: "power1.out", duration: 0.8 }
-      );
-
-      // Mark GSAP animation as played
-      sessionStorage.setItem("gsapPlayed", "true");
-    }
+    // Animate the "Club" text (slide in from left)
+    tl.fromTo(
+      clubRef.current,
+      { x: -30, opacity: 0 },
+      { 
+        x: 0, 
+        opacity: 1, 
+        ease: "power1.out", 
+        duration: 0.8 
+      }
+    );
+    
+    tl.fromTo(
+      fmRef.current,
+      { x: 30, opacity: 0 },
+      { 
+        x: 0, 
+        opacity: 1, 
+        ease: "power1.out", 
+        duration: 0.8 
+      }
+    );
   
 
     // Create a separate timeline for infinite color cycling

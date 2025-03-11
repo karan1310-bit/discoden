@@ -10,23 +10,14 @@ import Lenis from "lenis";
 import { useEffect, useState } from "react";
 export default function Home() {
 
-  const [isLoading, setIsLoading] = useState(true);
-  const isFirstLoad = sessionStorage.getItem("firstLoadDone");
-
+  const [isLoading, setIsLoading] = useState(true);    
+  
   useEffect(() => {
-    if (!isFirstLoad) {
-      // Run preloader
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-
-        // Mark first load as done
-        sessionStorage.setItem("firstLoadDone", "true");
-      }, 2000);
-    } else {
+    setTimeout(() => {
       setIsLoading(false);
-    }
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
   }, []);
 
   useEffect(() => {
@@ -36,7 +27,7 @@ export default function Home() {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-  }, []);
+  }, []); 
 
   return (
     <div className='min-h-screen bg-black text-white overflow-hidden'>
