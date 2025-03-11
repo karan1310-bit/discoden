@@ -6,13 +6,13 @@ import gsap from "gsap";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const images = [
-  "/medias/1.jpg",
-  "/medias/2.jpg",
-  "/medias/3.jpg",
-  "/medias/1.jpg",
-  "/medias/2.jpg",
-  "/medias/3.jpg",
+const mediaItems = [
+  { type: "image", src: "/medias/1.jpg" },
+  { type: "video", src: "/videos/1.mp4" }, // Example video
+  { type: "image", src: "/medias/2.jpg" },
+  { type: "video", src: "/videos/2.mp4" }, // Another example video
+  { type: "video", src: "/videos/3.mp4" },
+  { type: "video", src: "/videos/4.mp4" },
 ];
 
 const Slider = () => {
@@ -22,8 +22,8 @@ const Slider = () => {
     if (!swiperRef.current) return;
 
     swiperRef.current.swiper.on("slideChangeTransitionStart", () => {
-      gsap.to(".swiper-slide-active img", { scale: 1.2, opacity: 1, duration: 0.5 });
-      gsap.to(".swiper-slide-prev img, .swiper-slide-next img", {
+      gsap.to(".swiper-slide-active img, .swiper-slide-active video", { scale: 1.2, opacity: 1, duration: 0.5 });
+      gsap.to(".swiper-slide-prev img, .swiper-slide-next img, .swiper-slide-prev video, .swiper-slide-next video", {
         scale: 0.9,
         opacity: 0.5,
         duration: 0.5,
@@ -50,22 +50,30 @@ const Slider = () => {
             spaceBetween: 15,
           },
           768: {
-            slidesPerView: 3, // Original styling for md+
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
-        className="w-full"
+        className="w-full h-[400px]"
       >
-        {images.map((src, index) => (
-          <SwiperSlide
-            key={index}
-            className="flex justify-center items-center px-4 pl-12 sm:pl-6 md:pl-12"
-          >
-            <img
-              src={src}
-              alt={`Gallery ${index}`}
-              className="rounded-3xl object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
-            />
+        {mediaItems.map((item, index) => (
+          <SwiperSlide key={index} className="flex justify-center items-center px-4 pl-12 sm:pl-6 md:pl-12">
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                alt={`Gallery ${index}`}
+                className="rounded-3xl object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
+              />
+            ) : (
+              <video
+                src={item.src}
+                className="rounded-3xl object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

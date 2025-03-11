@@ -8,7 +8,7 @@ const Book = ({ id, title, leftIcon, containerClass, rightIcon, link }) => {
       >
         {leftIcon}
   
-        <span className="relative inline-flex overflow-hidden font-neue text-7xl lg:text-[14vw] font-normal">
+        <span className="relative inline-flex overflow-hidden font-neue text-6xl md:text-[14vw] font-normal">
         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
             {title}
           </div>

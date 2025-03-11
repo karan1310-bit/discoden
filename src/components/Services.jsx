@@ -3,9 +3,8 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Picture1 from '../../public/medias/1.jpg';
-import Picture2 from '../../public/medias/2.jpg';
+import Picture2 from '../../public/medias/3.jpg';
 import Image from "next/image";
-import Book from "./Book";
 import Button from "./Button";
 
 gsap.registerPlugin(ScrollTrigger) 

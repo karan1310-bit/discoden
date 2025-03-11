@@ -11,25 +11,32 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
+  const isFirstLoad = sessionStorage.getItem("firstLoadDone");
 
   useEffect(() => {
-    setTimeout( () => {
+    if (!isFirstLoad) {
+      // Run preloader
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+
+        // Mark first load as done
+        sessionStorage.setItem("firstLoadDone", "true");
+      }, 2000);
+    } else {
       setIsLoading(false);
-      document.body.style.cursor = 'default'
-      window.scrollTo(0,0);
-    }, 2000)
-},[])
+    }
+  }, []);
 
-useEffect(() => {
-  const lenis = new Lenis();
-
-  function raf(time) {
-    lenis.raf(time);
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
     requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-}, []);
+  }, []);
 
   return (
     <div className='min-h-screen bg-black text-white overflow-hidden'>

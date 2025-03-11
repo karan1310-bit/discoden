@@ -35,7 +35,7 @@ const PreLoader = () => {
     }
 
     return (
-        <motion.div variants={slideUp} initial="initial" exit="exit" className="h-screen w-screen font-neue flex items-center justify-center fixed z-[99] bg-black">
+        <motion.div variants={slideUp} initial="initial" exit="exit" className="h-screen w-screen font-neue flex items-center justify-center fixed z-[999] bg-black">
             {dimension.width > 0 && 
             <>
                 <motion.p variants={opacity} initial="initial" animate="enter" className='flex items-center absolute z-10 text-white text-[42px]'>{words[index]}</motion.p>
