@@ -3,12 +3,12 @@ const Book = ({ id, title, leftIcon, containerClass, rightIcon, link }) => {
       <button
         id={id}
         className={
-          `group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-zinc-900 px-7 py-3 text-white
+          `group relative z-10 w-fit cursor-pointer
           ${containerClass}`}
       >
         {leftIcon}
   
-        <span className="relative inline-flex overflow-hidden font-neue text-base">
+        <span className="relative inline-flex overflow-hidden font-neue text-7xl lg:text-[14vw] font-normal">
         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
             {title}
           </div>

@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Image from "next/image";
 import logo from "../../public/images/disco.png";
+import Book from "./Book";
 
 const Hero = () => {
   const sunRef = useRef(null);
@@ -77,37 +78,36 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[73vw] h-[73vw] lg:w-[32vw] lg:h-[32vw] rounded-full flex items-center justify-center mb-16 md:mb-28"
+          className="absolute z-50 w-[86vw] h-[86vw] lg:w-[34vw] lg:h-[34vw] rounded-full flex items-center justify-center mb-14 md:mb-32"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
           }}
         >
-          <Image src={logo} alt="" className="z-50 w-[71vw] h-[71vw] lg:w-[31vw] lg:h-[31vw] rounded-full"/>
+          <Image src={logo} alt="" className="z-50 w-[84vw] h-[84vw] lg:w-[33vw] lg:h-[33vw] rounded-full"/>
           </div>
 
         {/* CLUB / FM TEXT */}
         <div className="flex flex-col lg:flex-row md:items-center items-start gap-40 justify-between w-full px-6 lg:px-10 lg:pt-56  lg:space-y-0">
-          <div ref={clubRef} className="lg:text-start pb-12" id="club">
-            <h1 className="text-6xl lg:text-[12vw] font-normal">Club</h1>
+          <div ref={clubRef} className="lg:text-start z-[99] md:pb-6 pb-16" id="club">
+            <Book title="Lux">
+            </Book>
             <p className="text-xl tracking-tight lg:text-5xl text-gray-300">
-              See our program
+              See our services
               <br />
-              and come dance{" "}
+              and come dance
               <FaArrowRight className="h-10 w-12 md:h-8 md:w-8 md:mt-2" />
             </p>
           </div>
-          <div ref={fmRef} className="lg:text-start pb-6" id="fm">
-            <h1 className="text-6xl lg:text-[12vw] font-normal">FM</h1>
+          <div ref={fmRef} className="lg:text-start z-[99] pb-0 md:pb-8" id="fm">
+          <Book title="Vibe">
+          </Book>
             <p className="text-xl lg:text-5xl text-gray-300">
-              Watch live or
-              <br />
-              browse our archive{" "}
+            Browse our gallery <br /> of moments
+  
               <FaArrowRight className="h-10 w-12 md:mt-2 md:h-8 md:w-8" />
             </p>
-            <span className="text-xs lg:text-sm text-red-400 md:mt-2 block">
-              Currently offline
-            </span>
+            
           </div>
         </div>
       </main>

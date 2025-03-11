@@ -1,8 +1,8 @@
 'use client'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import GoogleReviews from '@/components/GoogleReview'
 import Navbar from '@/components/Navbar'
-import Testimonial from '@/components/Testimonial'
 import Lenis from 'lenis'
 import React, { useEffect } from 'react'
 
@@ -23,7 +23,9 @@ const page = () => {
     <main className='min-h-screen bg-black text-white'>
       <Navbar />
       <Contact />
-      <Testimonial />
+      <div className='mt-6 md:mt-10 px-8 md:px-16 bg-black'>
+      <GoogleReviews />
+      </div>
       <Footer />
     </main>
   )

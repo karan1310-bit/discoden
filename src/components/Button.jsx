@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-const Button = ({ id, title, leftIcon, containerClass, rightIcon, link }) => {
+const Button = ({ id, title, leftIcon, containerClass, rightIcon, link, textClass }) => {
   return (
     <Link href={`/${link}`}>
     <button
@@ -12,7 +12,7 @@ const Button = ({ id, title, leftIcon, containerClass, rightIcon, link }) => {
     >
       {leftIcon}
 
-      <span className="relative inline-flex overflow-hidden font-light text-3xl">
+      <span className={`relative inline-flex overflow-hidden font-light text-3xl ${textClass}`}>
       <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
           {title}
         </div>

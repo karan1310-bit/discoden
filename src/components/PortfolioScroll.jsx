@@ -2,115 +2,83 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { RiVipLine } from "react-icons/ri";
+import { FaCameraRetro } from "react-icons/fa";
+import { GiMusicalNotes, GiBalloons, GiSofa } from "react-icons/gi";
+import { TbNumber21Small } from "react-icons/tb";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// Import images properly (Replace with actual paths if using Next.js)
-import teamGbImage from "../../public/medias/8.jpg";
-import premierPadelImage from "../../public/medias/7.jpg";
-import wildDateImage from "../../public/medias/6.jpg";
-import wildDateImg from "../../public/medias/4.jpg";
-import wildDate from "../../public/medias/5.jpg";
-
-// Project data with correct image imports
+// Project data
 const projects = [
-  {
-    id: 1,
-    title: "TEAM GB",
-    image: teamGbImage,
-  },
-  {
-    id: 2,
-    title: "PREMIER PADEL",
-    image: premierPadelImage,
-    description:
-      "We service the world's biggest padel tour ",
-  },
-  {
-    id: 3,
-    title: "WILD DATE",
-    image: wildDateImage,
-  },
-  {
-    id: 4,
-    title: "WILD DATE",
-    image: wildDateImg,
-    description:
-    "We service the world's biggest padel tour ",
-  },
-  {
-    id: 5,
-    title: "WILD DATE",
-    image: wildDate,
-  },
-{
-    id: 7,
-    title: "TEAM GB",
-    image: teamGbImage,
-  },
+  { id: 1, title: "360 VIDEO BOOTH", icon: <FaCameraRetro className="text-8xl" />, description: "Capture every moment in 360 degrees, offering a unique and immersive video experience for your event." },
+  { id: 2, title: "VIP ZONE", icon: <RiVipLine className="text-8xl" />, description: "A luxurious and exclusive area designed for premium guests, offering comfort and special privileges." },
+  { id: 3, title: "Professional DJ", icon: <GiMusicalNotes className="text-8xl" />, description: "Experience high-energy music and entertainment with a skilled DJ spinning the best tracks all night long." },
+  { id: 4, title: "LED FURNITURE", icon: <GiSofa className="text-8xl" />, description: "Modern and stylish LED-lit furniture that enhances the ambiance and adds a vibrant glow to your event." },
+  { id: 5, title: "BALLOON DECOR", icon: <GiBalloons className="text-8xl" />, description: "Stunning balloon decorations that bring color, joy, and a festive atmosphere to any celebration." },
+  { id: 6, title: "MARQUEE NUMBERS", icon: <TbNumber21Small className="text-8xl" />, description: "Giant illuminated marquee numbers that create the perfect backdrop for memorable photos and event decor." },
 ];
 
 const PortfolioScroll = () => {
-    const containerRef = useRef(null);
-    const horizontalRef = useRef(null);
-  
-    useEffect(() => {
-      gsap.to(horizontalRef.current, {
-        x: () => -(horizontalRef.current.scrollWidth - window.innerWidth),
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: () => `+=${horizontalRef.current.scrollWidth - window.innerWidth}`,
-          pin: true,
-          scrub: 1,
-          invalidateOnRefresh: true, // Ensures smooth resizing
-        },
-      });
-    }, []);
-  
-    return (
-      <div ref={containerRef} className="relative w-full overflow-hidden bg-black pb-10">
-        {/* Scrolling Content */}
-        <div ref={horizontalRef} className="flex items-center gap-10 h-screen px-20">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="project-box flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[75vh] md:h-[70vh] relative border-[1px] border-white rounded-[48px] overflow-hidden shadow-xl"
-              style={{
-                backgroundImage: `url(${project.image.src})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              {/* Dark Overlay */}
-              
-  
-              {/* Card Content */}
-              <div className="absolute bottom-5 left-5 right-5 text-white p-5">
-                <h2 className="text-3xl font-bold">{project.title}</h2>
-                {project.description && (
-                  <p className="mt-4 text-lg">{project.description}</p>
-                )}
-                {project.tags && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="px-4 py-2 bg-white text-black rounded-full text-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
+  const containerRef = useRef(null);
+  const horizontalRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      if (!horizontalRef.current || !containerRef.current) return;
+
+      const updateScrollAnimation = () => {
+        const containerWidth = horizontalRef.current.scrollWidth;
+        const viewportWidth = window.innerWidth;
+
+        gsap.to(horizontalRef.current, {
+          x: () => -(containerWidth - viewportWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: () => `+=${containerWidth - viewportWidth}`,
+            pin: true,
+            scrub: 1,
+            invalidateOnRefresh: true, // Ensures smooth resizing
+          },
+        });
+      };
+
+      updateScrollAnimation();
+      window.addEventListener("resize", updateScrollAnimation);
+
+      return () => {
+        window.removeEventListener("resize", updateScrollAnimation);
+      };
+    }, containerRef);
+
+    return () => ctx.revert(); // Cleanup on unmount
+  }, []);
+
+  return (
+    <div ref={containerRef} className="relative w-full overflow-hidden bg-black pb-10 mt-12 md:mt-0">
+      {/* Scrolling Content */}
+      <div ref={horizontalRef} className="flex md:flex-row flex-col items-center md:gap-10 gap-6 h-auto md:h-screen px-6 md:px-20">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="project-box flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[52vh] md:h-[70vh] relative border-[1px] border-white rounded-[48px] overflow-hidden shadow-xl flex flex-col items-center justify-center bg-zinc-950 p-6 md:p-0 text-center transition-all ease-in duration-300 hover:bg-yellow-400 hover:text-black"
+          >
+            {/* Icon Display */}
+            <div className="flex justify-center items-center w-full mb-4">{project.icon}</div>
+
+            {/* Card Content */}
+            <div className="p-4 md:p-6">
+              <h2 className="text-2xl md:text-3xl font-bold">{project.title}</h2>
+              {project.description && <p className="mt-2 md:mt-4 text-base md:text-lg">{project.description}</p>}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    );
-  };
-  
-  export default PortfolioScroll;
+    </div>
+  );
+};
+
+export default PortfolioScroll;
