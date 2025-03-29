@@ -33,7 +33,7 @@ const Slider = () => {
 
   return (
     <>
-    <div className="max-w-7xl mx-auto px-4 select-none">
+    <div className="max-w-8xl mx-auto px-6 md:px-16 select-none">
       <h1 className="text-center font-neue text-3xl mb-12">Gallery</h1>
 
       <Swiper
@@ -50,11 +50,11 @@ const Slider = () => {
             spaceBetween: 15,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
-        className="w-full h-[350px] md:h-[400px] rounded-sm object-cover"
+        className="w-full rounded-md h-[350px] md:h-[650px] object-cover"
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index} className="flex justify-center items-center px-4 pl-12 sm:pl-6 md:pl-12">
@@ -62,12 +62,12 @@ const Slider = () => {
               <img
                 src={item.src}
                 alt={`Gallery ${index}`}
-                className="rounded-sm object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
+                className="rounded-md object-cover transition-all duration-500 h-full w-[90%] sm:w-[80%] md:w-[100%]"
               />
             ) : (
               <video
                 src={item.src}
-                className="rounded-sm object-cover transition-all duration-500 w-[90%] sm:w-[80%] md:w-[90%]"
+                className="rounded-md object-cover transition-all duration-500 h-full w-[90%] sm:w-[80%] md:w-[100%]"
                 autoPlay
                 loop
                 muted

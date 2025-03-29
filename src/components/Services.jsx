@@ -12,11 +12,11 @@ gsap.registerPlugin(ScrollTrigger)
 const images = [
     {
       src: Picture1,
-      className: "h-[60vh] md:h-[70vh] w-[50vh] md:w-[70vh] z-[1]",
+      className: "h-[60vh] md:h-[80vh] w-[40vh] md:w-[70vh] z-[1]",
     },
     {
       src: Picture2,
-      className: "left-[45vw] md:left-[55vw] top-[15vh] md:h-[50vh] md:w-[40vh] h-[35vh] w-[30vh] z-[2]",
+      className: "left-[33vw] md:left-[55vw] top-[15vh] md:h-[50vh] md:w-[40vh] h-[35vh] w-[30vh] z-[2]",
     },
   ];
 
