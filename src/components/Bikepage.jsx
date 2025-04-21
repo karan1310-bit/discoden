@@ -32,7 +32,7 @@ const BikePage = () => {
             GO TO FEED
           </a>
         </div></div>
-      <div className="mt-6 md:mt-10 px-8 md:px-12 bg-black">
+      <div className="mt-6 md:mt-10 px-8 md:px-12 bg-transparent">
         <InstagramFeed />
       </div>
       </>
