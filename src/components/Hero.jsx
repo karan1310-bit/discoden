@@ -19,8 +19,8 @@ const Hero = () => {
     // Animate the sun in (scale & opacity)
     tl.fromTo(
       sunRef.current,
-      { scale: 0.5, opacity: 0 ,delay: 2.5},
-      { scale: 1, opacity: 1 ,delay: 2.5},
+      { scale: 0.5, opacity: 0 ,delay: 2.4},
+      { scale: 1, opacity: 1 ,delay: 2.4},
     );
 
     // Animate the "Club" text (slide in from left)
@@ -31,7 +31,7 @@ const Hero = () => {
         x: 0, 
         opacity: 1, 
         ease: "power1.out",
-        duration: 0.8 
+        duration: 0.5 
       }
     );
     
@@ -42,7 +42,7 @@ const Hero = () => {
         x: 0, 
         opacity: 1, 
         ease: "power1.out", 
-        duration: 0.8 
+        duration: 0.5
       }
     );
   
@@ -79,7 +79,7 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[86vw] h-[86vw] lg:w-[34vw] lg:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-32"
+          className="absolute z-50 w-[86vw] h-[86vw] lg:w-[34vw] lg:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-36"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",

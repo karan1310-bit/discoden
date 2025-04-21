@@ -2,6 +2,7 @@
 import BikePage from "@/components/Bikepage";
 import Description from "@/components/Description";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReview";
 import Hero from "@/components/Hero";
 import PortfolioScroll from "@/components/PortfolioScroll";
 import PreLoader from "@/components/PreLoader";
@@ -30,15 +31,16 @@ export default function Home() {
   }, []); 
 
   return (
-    <div className='min-h-screen bg-black text-white overflow-hidden'>
+    <main className='min-h-screen bg-black text-white overflow-hidden'>
     <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />}
-      </AnimatePresence>
+    </AnimatePresence>
     <Hero />
     <PortfolioScroll />
     <Description />
     <BikePage />
+    <GoogleReviews />
     <Footer />
-    </div>
+    </main>
   )
 }

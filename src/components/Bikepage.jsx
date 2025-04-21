@@ -20,7 +20,7 @@ const InstagramFeed = () => {
 const BikePage = () => {
   return (
       <>
-      <div className='flex items-center justify-between mb-12 px-6 md:px-16'>
+      <div className='flex items-center justify-between mb-12 px-6 md:px-12'>
         <h2 className="text-3xl md:text-5xl font-bold">FOLLOW US</h2>
         <div className="flex items-center justify-center"> 
           <a
@@ -32,7 +32,7 @@ const BikePage = () => {
             GO TO FEED
           </a>
         </div></div>
-      <div className="mt-6 md:mt-10 px-8 md:px-16 bg-black">
+      <div className="mt-6 md:mt-10 px-8 md:px-12 bg-black">
         <InstagramFeed />
       </div>
       </>

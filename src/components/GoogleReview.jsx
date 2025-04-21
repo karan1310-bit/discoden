@@ -12,7 +12,9 @@ const GoogleReviews = () => {
     }, []);
   
     return (
+      <div className="mb-12 px-6 md:px-12">
       <div className="elfsight-app-564ee4d1-e713-493f-b48d-c7e30f90c8f1" data-elfsight-app-lazy></div>
+      </div>
     );
   };
 

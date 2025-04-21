@@ -48,10 +48,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 lg:px-8 py-4 lg:py-8">
+    <nav className="flex items-center justify-between px-6 lg:px-8 py-6 lg:py-8">
       {/* Logo / Site Title */}
       <div className="text-4xl lg:text-7xl font-bold font-yoyo tracking-wider uppercase">
-        <Link href="/">DiscoDen</Link>
+        <Link href="/">Disco Den</Link>
       </div>
 
       {/* Mobile Burger Icon */}
@@ -67,7 +67,7 @@ export default function Navbar() {
       </button>
 
       {/* Desktop Navigation remains unchanged */}
-      <ul className="hidden md:flex space-x-4 lg:space-x-6 text-xl lg:text-2xl font-neue">
+      <ul className="hidden md:flex space-x-4 lg:space-x-6 text-xl lg:text-xl font-neue">
         {navLinks.map((link, index) => (
           <li key={index}>
             <Button id="contact-hero" title={link.label} link={link.href} />
