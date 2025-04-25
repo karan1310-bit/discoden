@@ -27,7 +27,7 @@ const BikePage = () => {
             href="https://www.instagram.com/discoden_airclub?igsh=ZDk2aTgxMmxubW1l"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-3 md:px-6 md:py-3 text-sm md:text-lg font-neue font-light text-white bg-gradient-to-r from-purple-500 to-yellow-500 rounded-full shadow-lg hover:opacity-80"
+            className="px-3 py-3 md:px-6 md:py-3 text-sm md:text-lg font-neue font-light rounded-lg text-white transition-all ease-in duration-300 hover:bg-yellow-400 hover:text-black"
           >
             GO TO FEED
           </a>

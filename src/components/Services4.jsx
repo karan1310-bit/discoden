@@ -2,8 +2,8 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Picture1 from '../../public/medias/3.jpg';
-import Picture2 from '../../public/services/air.png';
+import Picture1 from '../../public/services/dance1.jpg';
+import Picture2 from '../../public/services/dance.png';
 import Image from "next/image";
 import Button from "./Button";
 
@@ -16,11 +16,11 @@ const images = [
     },
     {
       src: Picture2,
-      className: "left-[33vw] md:left-[55vw] top-[40vh] md:h-[60vh] md:w-[40vh] h-[42vh] w-[30vh] z-[2]",
+      className: "left-[33vw] md:left-[55vw] top-[40vh] md:h-[60vh] md:w-[40vh] h-[45vh] w-[30vh] z-[2]",
     },
   ];
 
-const Services = () => {
+const Services4 = () => {
 
     const container = useRef(null);
     const lettersRef = useRef([])
@@ -52,7 +52,7 @@ const Services = () => {
   return (
     <div ref={container} className="container min-h-screen font-neue lg:mb-[4vh]">
             <div className="body px-6 md:px-12">
-                <h1 className="m-0 mt-[10px] mb-3 text-2xl md:text-4xl leading-none uppercase" ref={title1}>Air Club Package Starting At:</h1>
+                <h1 className="m-0 mt-[10px] mb-3 text-2xl md:text-4xl leading-none uppercase" ref={title1}>Led Dance Floor: </h1>
                 <Button link= "book" title="Book now" containerClass="border-[1px] border-white overflow-hidden rounded-full px-4 py-3 md:px-7 md:py-3" textClass="text-sm md:text-xl"></Button>
             </div>
             <div className="images flex justify-center relative mt-[5vh] md:mt-[2vh]">
@@ -74,4 +74,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Services4

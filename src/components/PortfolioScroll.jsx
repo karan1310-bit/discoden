@@ -8,6 +8,7 @@ import { FaCameraRetro } from "react-icons/fa";
 import { GiMusicalNotes, GiBalloons, GiSofa } from "react-icons/gi";
 import { TbNumber21Small } from "react-icons/tb";
 import Image from "next/image";
+import Link from "next/link";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -60,8 +61,9 @@ const PortfolioScroll = () => {
       {/* Scrolling Content */}
       <div ref={horizontalRef} className="flex md:flex-row flex-col items-center md:gap-10 gap-6 h-auto md:h-screen px-6 md:px-20">
         {projects.map((project) => (
+          <Link key={project.id} href="/services">
           <div
-          key={project.id}
+          
           className="project-box relative flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[40vw] h-[45vh] md:h-[70vh] border-[1px] border-white rounded-[48px] overflow-hidden shadow-xl flex items-center justify-center text-center transition-all ease-in duration-300 hover:bg-yellow-400 hover:text-black"
           
         >
@@ -83,7 +85,7 @@ const PortfolioScroll = () => {
               <p className="mt-2 md:mt-4 bg-transparent text-base md:text-lg">{project.description}</p>
             )}
           </div>
-        </div>
+        </div></Link>
         ))}
       </div>
     </div>

@@ -89,8 +89,8 @@ const Hero = () => {
           </div>
 
         {/* CLUB / FM TEXT */}
-        <div className="flex flex-col lg:flex-row md:items-center items-start gap-72 justify-between w-full px-6 lg:px-10 lg:pt-56 lg:space-y-0">
-          <div ref={clubRef} className="lg:text-start bg-transperant z-[99] md:pb-6 pb-2" id="club">
+        <div className="flex flex-col lg:flex-row md:items-center bg-transperant items-start gap-72 justify-between w-full px-6 lg:px-10 lg:pt-56 lg:space-y-0">
+          <div ref={clubRef} className="lg:text-start bg-transperant md:pb-6 pb-2" id="club">
             <Book title="Lux">
             </Book>
             <p className="text-3xl bg-transperant tracking-tight lg:text-5xl text-gray-300">
@@ -100,7 +100,7 @@ const Hero = () => {
               <FaArrowRight className="h-10 bg-transperant w-12 md:h-8 md:w-8 mt-3 md:mt-2" />
             </p>
           </div>
-          <div ref={fmRef} className="lg:text-start z-[99] pb-10 md:pb-8" id="fm">
+          <div ref={fmRef} className="lg:text-start pb-10 md:pb-8" id="fm">
           <Book title="Vibe">
           </Book>
             <p className="text-3xl bg-transperant lg:text-5xl text-gray-300">
