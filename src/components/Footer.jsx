@@ -8,15 +8,15 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className="max-h-fit bg-black text-white flex flex-col px-6 md:px-12 py-8 md:py-12 mt-2 font-neue">
+    <div className="max-h-fit bg-black text-white flex flex-col px-6 md:px-12 py-4 md:py-10 mt-2 font-neue">
     {/* Logo */}
     <div className="">
-      <Image src={logo} width={132} height={132} alt="Logo" className="w-24 h-24 md:w-40 md:h-40 rounded-full" />
+      <Image src={logo} width={132} height={132} alt="Logo" className="w-32 h-32 md:w-40 md:h-40 rounded-full" />
     </div>
     
     {/* Main Text */}
     <div className="flex flex-col justify-center items-start mt-4 md:mt-6">
-      <h1 className="text-3xl md:text-8xl font-light leading-tight">
+      <h1 className="text-5xl md:text-8xl font-light leading-tight">
         A Inflatable Club <br />
         space at <span className="text-yellow-400">Metro Vancouver,</span>
         <br />
@@ -26,13 +26,16 @@ const Footer = () => {
     
     {/* Footer */}
     <div className="text-gray-400 text-lg flex flex-col md:flex-row md:justify-between md:items-center w-full mt-8 md:mt-12">
-      <span>&copy; 2025, developement: SleekFrameStudio</span>
-      <div className="flex space-x-2 md:space-x-4 mt-4 md:mt-0">
-        <a href="#" className="text-4xl transition-all ease-in duration-200 hover:text-yellow-400"><FaInstagram /></a>
-        <a href="#" className="text-4xl transition-all ease-in duration-200 hover:text-yellow-400"><FaWhatsapp /></a>
-        <a href="#" className="text-4xl transition-all ease-in duration-200 hover:text-yellow-400"><CiMail /></a>
-        <a href="#" className="text-4xl transition-all ease-in duration-200 hover:text-yellow-400"><FaTiktok /></a>
+      
+      <div className="flex space-x-2 md:space-x-4">
+        <a href="https://www.instagram.com/discoden_airclub?igsh=ZDk2aTgxMmxubW1l" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaInstagram /></a>
+        <a href="#" className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaWhatsapp /></a>
+        <a href="mailto:discoden.airclub@gmail.com" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><CiMail /></a>
+        <a href="https://www.tiktok.com/@discoden_airclub?_t=8lriNlylT1i&_r=1" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaTiktok /></a>
       </div>
+      
+      <span className='mt-4 md:mt-0 text-2xl'>Contact: 236-777-5425</span>
+      <span>&copy 2025,<br /> developement: SleekFrameStudio</span>
     </div>
   </div>
   )
