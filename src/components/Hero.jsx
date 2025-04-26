@@ -71,7 +71,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="h-screen overflow-hidden bg-black text-white flex flex-col font-neue">
+    <div className="min-h-screen overflow-hidden bg-black text-white flex flex-col font-neue">
       {/* NAVBAR */}
       <Navbar />
       {/* HERO SECTION */}
@@ -91,7 +91,7 @@ const Hero = () => {
         {/* CLUB / FM TEXT */}
         <div className="flex flex-col lg:flex-row md:items-center bg-transperant items-start gap-72 justify-between w-full px-6 lg:px-10 lg:pt-56 lg:space-y-0">
           <div ref={clubRef} className="lg:text-start bg-transperant md:pb-6 pb-2" id="club">
-            <Book title="Lux">
+            <Book title="Air">
             </Book>
             <p className="text-3xl bg-transperant tracking-tight lg:text-5xl text-gray-300">
               See our services
@@ -101,19 +101,16 @@ const Hero = () => {
             </p>
           </div>
           <div ref={fmRef} className="lg:text-start pb-10 md:pb-8" id="fm">
-          <Book title="Vibe">
+          <Book title="Club">
           </Book>
             <p className="text-3xl bg-transperant lg:text-5xl text-gray-300">
             Browse our gallery <br /> of moments
-  
               <FaArrowRight className="h-10 bg-transperant w-12 md:mt-2 md:h-8 mt-3 md:w-8" />
             </p>
-            
           </div>
         </div>
       </main>
     </div>
-
   );
 }
 

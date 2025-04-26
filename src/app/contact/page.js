@@ -30,7 +30,7 @@ const page = () => {
     <main className='min-h-screen bg-black text-white'>
       <Navbar />
       <Contact />
-      <div className='mt-6 md:mt-10 px-8 md:px-16 bg-black'>
+      <div className='mt-4 md:mt-2 px-8 md:px-16 bg-black'>
       </div>
       <Footer />
     </main>

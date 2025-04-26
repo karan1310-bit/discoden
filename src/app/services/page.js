@@ -9,6 +9,7 @@ import Services2 from '@/components/Services2';
 import Services3 from '@/components/Services3';
 import Services4 from '@/components/Services4';
 import Services5 from '@/components/Services5';
+import Services6 from '@/components/Services6';
 
 const page = () => {
 
@@ -33,8 +34,8 @@ const page = () => {
 >
     <main className='min-h-screen bg-black text-white overflow-hidden'>
     <Navbar />
-    <div className='min-h-fit bg-black text-white px-6 lg:px-12 font-neue mb-8 md:mb-1'>
-        <h1 className="text-xl lg:text-4xl font-light max-w-5xl py-8 md:py-16">
+    <div className='min-h-fit bg-black text-white px-6 lg:px-12 font-neue mb-8 md:mb-2'>
+        <h1 className="text-2xl lg:text-4xl font-light max-w-5xl py-8 md:py-16">
         Here are our services: Cutting-edge inflatable nightclubs, top-tier sound and lighting systems, customizable event setups, and a high-energy party experience—bringing the ultimate nightlife vibe to any location in Canada!
         </h1>
     </div>
@@ -43,6 +44,7 @@ const page = () => {
     <Services3 />
     <Services4 />
     <Services5 />
+    <Services6 />
     <Footer />
     </main></motion.div>
   )

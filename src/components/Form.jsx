@@ -93,7 +93,7 @@ const Form = () => {
         <div className="flex justify-center">
           <button 
             type="submit" 
-            className="flex items-center space-x-2 bg-yellow-500 text-black px-6 py-3 rounded-full font-bold text-lg transition duration-300 hover:bg-yellow-400"
+            className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-full font-bold text-lg border border-white transition duration-300 hover:bg-yellow-400 hover:text-black"
           >
             <span className="bg-transparent">SUBMIT</span>
             <span className="animate-pulse bg-transparent">→</span>
