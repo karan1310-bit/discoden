@@ -16,7 +16,7 @@ const images = [
     },
     {
       src: Picture2,
-      className: "left-[33vw] md:left-[55vw] top-[40vh] md:h-[60vh] md:w-[40vh] h-[42vh] w-[30vh] z-[2]",
+      className: "left-[33vw] md:left-[55vw] border border-white top-[40vh] md:h-[60vh] md:w-[40vh] h-[42vh] w-[30vh] z-[2]",
     },
   ];
 

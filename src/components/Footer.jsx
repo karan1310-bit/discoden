@@ -20,7 +20,7 @@ const Footer = () => {
         A Inflatable Club <br />
         space at <span className="text-yellow-400">Metro Vancouver,</span>
         <br />
-        <span className="text-yellow-400">Canada</span>
+        <span className="text-yellow-400">Canada.</span>
       </h1>
     </div>
     
@@ -29,13 +29,13 @@ const Footer = () => {
       
       <div className="flex space-x-2 md:space-x-4">
         <a href="https://www.instagram.com/discoden_airclub?igsh=ZDk2aTgxMmxubW1l" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaInstagram /></a>
-        <a href="#" className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaWhatsapp /></a>
+        <a href="https://wa.me/12367775425" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaWhatsapp /></a>
         <a href="mailto:discoden.airclub@gmail.com" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><CiMail /></a>
         <a href="https://www.tiktok.com/@discoden_airclub?_t=8lriNlylT1i&_r=1" target='blank' className="text-5xl transition-all ease-in duration-200 hover:text-yellow-400"><FaTiktok /></a>
       </div>
       
-      <span className='mt-4 md:mt-0 text-2xl'>Contact: 236-777-5425</span>
-      <span>&copy 2025,<br /> developement: SleekFrameStudio</span>
+      <span className='mt-8 md:mt-0'>Contact: 236-777-5425</span>
+      <span>&copy 2025<br /> Powered by: <a href='https://sleekframestudio.com/'>SleekFrameStudio</a></span>
     </div>
   </div>
   )
