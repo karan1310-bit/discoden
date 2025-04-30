@@ -79,23 +79,23 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[86vw] h-[86vw] lg:w-[34vw] lg:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-36"
+          className="absolute z-50 w-[96vw] h-[96vw] md:w-[34vw] md:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-36"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
           }}
         >
-          <Image src={logo} alt="" className="z-50 w-[84vw] h-[84vw] lg:w-[33vw] lg:h-[33vw] rounded-full"/>
+          <Image src={logo} alt="" className="z-50 w-[94vw] h-[94vw] md:w-[33vw] md:h-[33vw] rounded-full"/>
           </div>
 
         {/* CLUB / FM TEXT */}
-        <div className="flex flex-col lg:flex-row md:items-center bg-transperant items-start gap-72 justify-between w-full px-6 lg:px-10 lg:pt-80 lg:space-y-0">
-          <div ref={clubRef} className="lg:text-start bg-transperant md:pb-6 pb-2" id="club">
+        <div className="flex flex-row md:items-center bg-transperant items-start  md:gap-72 justify-between w-full px-6 pt-96 lg:px-10 lg:pt-96 lg:space-y-0">
+          <div ref={clubRef} className="lg:text-start bg-transperant md:pb-6" id="club">
             <Book title="Air">
             </Book>
             
           </div>
-          <div ref={fmRef} className="lg:text-start pb-10 md:pb-8" id="fm">
+          <div ref={fmRef} className="lg:text-start md:pb-8" id="fm">
           <Book title="Club">
           </Book>
             

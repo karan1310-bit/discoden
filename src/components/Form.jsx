@@ -50,9 +50,9 @@ const Form = () => {
             className="bg-transparent border border-gray-400 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
           <input 
-            type="text" 
-            placeholder="Phone Number" 
-            {...register("phone")} 
+            type="tel" 
+            placeholder="Phone Number*" 
+            {...register("phone", { required: "Number is required" })} 
             className="bg-transparent border border-gray-400 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
