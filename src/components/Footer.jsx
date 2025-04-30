@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       
       <span className='mt-8 md:mt-0'>Contact: 236-777-5425</span>
-      <span>&copy 2025<br /> Powered by: <a href='https://sleekframestudio.com/'>SleekFrameStudio</a></span>
+      <span>&copy; 2025, Powered by: <a href='https://sleekframestudio.com/'>SleekFrameStudio</a></span>
     </div>
   </div>
   )

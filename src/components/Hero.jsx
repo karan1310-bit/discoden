@@ -79,13 +79,13 @@ const Hero = () => {
         {/* The sun (animated gradient) */}
         <div
           ref={sunRef}
-          className="absolute z-50 w-[96vw] h-[96vw] md:w-[34vw] md:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-36"
+          className="absolute z-50 w-[90vw] h-[90vw] md:w-[34vw] md:h-[34vw] rounded-full flex items-center justify-center mb-20 md:mb-36"
           style={{
             background: "linear-gradient(45deg, #FFA500, #FFD700)",
             boxShadow: "0 0 40px 20px rgba(255, 200, 0.5, 0.2)",
           }}
         >
-          <Image src={logo} alt="" className="z-50 w-[94vw] h-[94vw] md:w-[33vw] md:h-[33vw] rounded-full"/>
+          <Image src={logo} alt="" className="z-50 w-[88vw] h-[88vw] md:w-[33vw] md:h-[33vw] rounded-full"/>
           </div>
 
         {/* CLUB / FM TEXT */}
